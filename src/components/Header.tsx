@@ -23,7 +23,7 @@ const Header = (props: Props) => {
         </a>
       </Link>
 
-      <nav className="flex gap-[48px] font-medium">
+      <nav className="flex gap-[48px] font-medium opacity-[0.48]">
         <Link href="/">About</Link>
         <Link href="/">Product</Link>
         <Link href="/">Blog</Link>
@@ -31,7 +31,7 @@ const Header = (props: Props) => {
       </nav>
 
       <div>
-        <IoReorderThree size={24} />
+        <IoReorderThree size={24} color="#292D32" />
       </div>
     </div>
   );
