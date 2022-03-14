@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Blog from "../components/Landing/Blog";
 
 import CallToAction from "../components/Landing/CallToAction";
 import FeaturedOn from "../components/Landing/FeaturedOn";
@@ -36,6 +37,10 @@ const Home: NextPage = () => {
 
       <div className="mt-[289px]">
         <HowItWorks />
+      </div>
+
+      <div className="mt-[289px] mb-[168px]">
+        <Blog />
       </div>
     </div>
   );

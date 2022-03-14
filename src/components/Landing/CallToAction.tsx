@@ -14,10 +14,10 @@ const CallToAction = ({ reverse }: { reverse?: boolean }) => {
       <div className={`w-1/2 flex ${reverse ? "pl-5" : "justify-end"}`}>
         <div className="relative h-[344px] w-[606px] bg-gradient-to-b from-[#F5F5F5] ">
           <div
-            className={`absolute -${
+            className={`absolute ${
               reverse
-                ? "left-[110px] -scale-x-100 scale-y-100"
-                : "right-[110px]"
+                ? "-left-[110px] -scale-x-100 scale-y-100"
+                : "-right-[110px]"
             } -top-7`}
           >
             <CTAStroke />

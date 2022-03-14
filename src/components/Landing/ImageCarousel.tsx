@@ -9,7 +9,7 @@ import StockWomen from "../../assets/images/women.jpg";
 
 const ImageCarousel = () => {
   return (
-    <div className="flex overflow-x-auto gap-5 scrollbar-hide">
+    <div className="flex gap-5 overflow-x-auto scrollbar-hide">
       <div>
         <img
           className="min-w-[27.5vw] h-[392px] object-cover"
