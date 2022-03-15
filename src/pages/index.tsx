@@ -11,7 +11,7 @@ import Blog from "../components/Landing/Blog";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="px-4">
       <Head>
         <title>Afrigives</title>
       </Head>

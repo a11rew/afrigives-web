@@ -12,28 +12,28 @@ const ImageCarousel = () => {
     <div className="flex gap-5 overflow-x-auto scrollbar-hide">
       <div>
         <img
-          className="min-w-[27.5vw] h-[392px] object-cover"
+          className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] object-cover"
           src={StockGirls.src}
           alt="Image of smiling kids"
         />
       </div>
       <div>
         <img
-          className="min-w-[27.5vw] h-[392px] object-cover"
+          className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] object-cover"
           src={StockKids.src}
           alt="Image of school kids in uniform"
         />
       </div>
       <div>
         <img
-          className="min-w-[27.5vw] h-[392px] object-cover"
+          className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] object-cover"
           src={StockTrad.src}
           alt="Image of celebrating women"
         />
       </div>
       <div>
         <img
-          className="min-w-[27.5vw] h-[392px] object-cover"
+          className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] object-cover"
           src={StockWomen.src}
           alt="Image of women in traditional garb"
         />

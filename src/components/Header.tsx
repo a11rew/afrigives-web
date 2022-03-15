@@ -23,7 +23,7 @@ const Header = (props: Props) => {
         </a>
       </Link>
 
-      <nav className="flex gap-[48px] font-medium opacity-[0.48]">
+      <nav className="hidden md:flex gap-[48px] font-medium opacity-[0.48]">
         <Link href="/">About</Link>
         <Link href="/">Product</Link>
         <Link href="/">Blog</Link>

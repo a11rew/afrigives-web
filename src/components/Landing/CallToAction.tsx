@@ -7,14 +7,14 @@ import PromoPhone from "../../assets/images/PromoPhone.png";
 const CallToAction = ({ reverse }: { reverse?: boolean }) => {
   return (
     <div
-      className={`flex justify-center w-[85.5%] m-auto ${
-        reverse && "flex-row-reverse"
+      className={`flex flex-col md:flex-row justify-center w-[85.5%] m-auto ${
+        reverse && "md:flex-row-reverse"
       }`}
     >
-      <div className={`w-1/2 flex ${reverse ? "pl-5" : "justify-end"}`}>
+      <div className={`md:w-1/2 flex ${reverse ? "pl-5" : "justify-end"}`}>
         <div className="relative h-[344px] w-[606px] bg-gradient-to-b from-[#F5F5F5] ">
           <div
-            className={`absolute ${
+            className={`absolute hidden md:block ${
               reverse
                 ? "-left-[110px] -scale-x-100 scale-y-100"
                 : "-right-[110px]"
@@ -28,8 +28,8 @@ const CallToAction = ({ reverse }: { reverse?: boolean }) => {
         </div>
       </div>
       <div
-        className={`w-1/2 flex items-center pl-28 ${
-          reverse && "pl-0 pr-28 justify-end text-right"
+        className={`md:w-1/2 flex items-center md:pl-28 ${
+          reverse && "pl-0 md:pr-28 justify-end text-right"
         }`}
       >
         <div className="">
@@ -37,7 +37,7 @@ const CallToAction = ({ reverse }: { reverse?: boolean }) => {
             Find and donate clothes to causes you care about easily
           </h3>
           <div className={`flex ${reverse && "justify-end"}`}>
-            <button className="max-w-[293px] flex items-center justify-center outline outline-1 py-8 w-full bg-[#006633] text-white">
+            <button className="md:max-w-[293px] flex items-center justify-center outline outline-1 py-8 w-full bg-[#006633] text-white">
               See Figma Prototype
             </button>
           </div>
