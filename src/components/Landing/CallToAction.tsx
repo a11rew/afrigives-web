@@ -7,11 +7,11 @@ import PromoPhone from "../../assets/images/PromoPhone.png";
 const CallToAction = ({ reverse }: { reverse?: boolean }) => {
   return (
     <div
-      className={`flex flex-col md:flex-row justify-center w-[85.5%] m-auto ${
+      className={`flex flex-col md:flex-row justify-center md:w-[85.5%] m-auto ${
         reverse && "md:flex-row-reverse"
       }`}
     >
-      <div className={`md:w-1/2 flex ${reverse ? "pl-5" : "justify-end"}`}>
+      <div className={`md:w-1/2 flex ${reverse ? "md:pl-5" : "justify-end"}`}>
         <div className="relative h-[344px] w-full lg:w-[606px] bg-gradient-to-b from-[#F5F5F5] ">
           <div
             className={`absolute hidden md:block ${

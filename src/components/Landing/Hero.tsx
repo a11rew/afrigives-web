@@ -11,7 +11,7 @@ const CallToAction = () => {
         <span className="text-[#346734]">anywhere in Africa</span> easily with
         Afrigives
       </h2>
-      <div className="flex flex-col gap-5 mt-12 sm:flex-row">
+      <div className="flex flex-col mt-12 space-y-5 sm:space-y-0 sm:space-x-5 sm:flex-row">
         <button className="flex items-center justify-center gap-[18px] outline outline-1 py-8 w-full">
           <FaAndroid size={24} />
           <p className="font-medium">Download on Playstore</p>
