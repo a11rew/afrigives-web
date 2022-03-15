@@ -11,36 +11,36 @@ import Blog from "../components/Landing/Blog";
 
 const Home: NextPage = () => {
   return (
-    <div className="px-4">
+    <div className="">
       <Head>
         <title>Afrigives</title>
       </Head>
-      <div className="flex justify-center mt-[120px]">
+      <div className="flex justify-center mt-[56px] sm:mt-[120px] px-4">
         <Hero />
       </div>
-      <div className="mt-[120px]">
+      <div className="mt-[68px] sm:mt-[120px]">
         <ImageCarousel />
       </div>
-      <div className="mt-[120px]">
+      <div className="mt-20 sm:mt-[120px] px-4">
         <FeaturedOn />
       </div>
-      <div className="mt-[269px]">
+      <div className="mt-[120px] sm:mt-[269px] px-4">
         <CallToAction />
       </div>
 
-      <div className="mt-[362px]">
+      <div className="mt-[136px] sm:mt-[362px] px-4">
         <CallToAction reverse />
       </div>
 
-      <div className="mt-[362px]">
+      <div className="mt-[136px] sm:mt-[362px] px-4">
         <CallToAction />
       </div>
 
-      <div className="mt-[289px]">
+      <div className="mt-20 sm:mt-[289px] px-4">
         <HowItWorks />
       </div>
 
-      <div className="mt-[289px] mb-[168px]">
+      <div className="mt-20 sm:mt-[289px] mb-20 sm:mb-[168px] px-4">
         <Blog />
       </div>
 

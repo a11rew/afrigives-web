@@ -10,7 +10,7 @@ import BlogWoman from "../../assets/images/blog/blog-woman.jpeg";
 
 const Blog = () => {
   return (
-    <div className="px-[104px]">
+    <div className="lg:px-[104px]">
       <h2 className="font-medium opacity-[48%]">OUR BLOG</h2>
       <div className="flex justify-between">
         <h3 className="mb-14 mt-4 max-w-[374px] text-[1.9rem] leading-[39.58px]">
@@ -27,8 +27,8 @@ const Blog = () => {
       </div>
 
       <div>
-        <div className="flex h-[392px] gap-5">
-          <div className="h-[392px] relative w-[59.25%]">
+        <div className="flex flex-col md:flex-row h-[392px] gap-5">
+          <div className="h-[392px] relative md:w-[59.25%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of little kids"
@@ -47,7 +47,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className="h-[392px] relative w-[40.74%]">
+          <div className="h-[392px] relative md:w-[40.74%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of woman in traditional garb"
@@ -67,8 +67,8 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="flex h-[392px] gap-5 mt-5">
-          <div className="h-[392px] relative w-[40.74%]">
+        <div className="flex flex-col md:flex-row h-[392px] gap-5 mt-5">
+          <div className="h-[392px] relative md:w-[40.74%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of school boys"
@@ -87,7 +87,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-          <div className="h-[392px] relative w-[59.25%]">
+          <div className="h-[392px] relative md:w-[59.25%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of women in traditional garb"

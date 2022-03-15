@@ -19,7 +19,7 @@ const Header = (props: Props) => {
             width={24}
             height={24}
           />
-          <h1 className="font-bold">Afrigives</h1>
+          <h1 className="hidden font-bold md:block">Afrigives</h1>
         </a>
       </Link>
 

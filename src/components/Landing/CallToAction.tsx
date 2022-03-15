@@ -12,7 +12,7 @@ const CallToAction = ({ reverse }: { reverse?: boolean }) => {
       }`}
     >
       <div className={`md:w-1/2 flex ${reverse ? "pl-5" : "justify-end"}`}>
-        <div className="relative h-[344px] w-[606px] bg-gradient-to-b from-[#F5F5F5] ">
+        <div className="relative h-[344px] w-full lg:w-[606px] bg-gradient-to-b from-[#F5F5F5] ">
           <div
             className={`absolute hidden md:block ${
               reverse
@@ -22,18 +22,20 @@ const CallToAction = ({ reverse }: { reverse?: boolean }) => {
           >
             <CTAStroke />
           </div>
-          <div className="absolute -top-[35%] right-[20%]">
+
+          <div className="absolute -top-[35%] w-fit right-0 left-0 mx-auto my-0 scale-[80%]">
             <Image src={PromoPhone} alt="Screenshot of the Afrigives app" />
           </div>
         </div>
       </div>
+
       <div
-        className={`md:w-1/2 flex items-center md:pl-28 ${
-          reverse && "pl-0 md:pr-28 justify-end text-right"
+        className={`md:w-1/2 flex text-center md:text-left items-center md:pl-28 ${
+          reverse && "md:pl-0 md:pr-28 md:justify-end md:text-right"
         }`}
       >
-        <div className="">
-          <h3 className="max-w-[330px] mb-8 text-[#006633] text-[1.9rem] leading-[39.58px]">
+        <div className={`mt-[30%] sm:mt-[20%] md:mt-0`}>
+          <h3 className="lg:max-w-[330px] mb-8 text-[#006633] text-2xl lg:text-[1.9rem] leading-[39.58px]">
             Find and donate clothes to causes you care about easily
           </h3>
           <div className={`flex ${reverse && "justify-end"}`}>
