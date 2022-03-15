@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Blog from "../components/Landing/Blog";
 
 import CallToAction from "../components/Landing/CallToAction";
 import FeaturedOn from "../components/Landing/FeaturedOn";
 import Hero from "../components/Landing/Hero";
 import HowItWorks from "../components/Landing/HowItWorks";
 import ImageCarousel from "../components/Landing/ImageCarousel";
+import Footer from "../components/Footer";
+import Blog from "../components/Landing/Blog";
 
 const Home: NextPage = () => {
   return (
@@ -41,6 +42,10 @@ const Home: NextPage = () => {
 
       <div className="mt-[289px] mb-[168px]">
         <Blog />
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   );
