@@ -27,8 +27,8 @@ const Blog = () => {
       </div>
 
       <div>
-        <div className="flex flex-col md:flex-row h-[392px] gap-5">
-          <div className="h-[392px] relative md:w-[59.25%]">
+        <div className="flex flex-col md:flex-row md:h-[392px] gap-5">
+          <div className="h-[268px] md:h-[392px] relative md:w-[59.25%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of little kids"
@@ -38,16 +38,20 @@ const Blog = () => {
               />
             </div>
             <div className="absolute bottom-0 w-full h-[38.01%] bg-[#0C6D3D] bg-opacity-[56%] flex justify-between items-center px-[5.6%] text-white">
-              <div>
-                <h1 className="text-2xl font-bold">Story Headline</h1>
-                <h2 className="mt-3 font-bold">Uniform For Kids Campaign</h2>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h1 className="text-lg font-bold md:text-2xl">
+                  Story Headline
+                </h1>
+                <h2 className="text-xs font-bold md:text-base">
+                  Uniform For Kids Campaign
+                </h2>
               </div>
               <div>
                 <BsArrowRight size={44} />
               </div>
             </div>
           </div>
-          <div className="h-[392px] relative md:w-[40.74%]">
+          <div className="h-[268px] md:h-[392px] relative md:w-[40.74%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of woman in traditional garb"
@@ -57,9 +61,13 @@ const Blog = () => {
               />
             </div>
             <div className="absolute bottom-0 w-full h-[38.01%] bg-[#0C6D3D] bg-opacity-[56%] flex justify-between items-center px-[5.6%] text-white">
-              <div>
-                <h1 className="text-2xl font-bold">Story Headline</h1>
-                <h2 className="mt-3 font-bold">Uniform For Kids Campaign</h2>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h1 className="text-lg font-bold md:text-2xl">
+                  Story Headline
+                </h1>
+                <h2 className="text-xs font-bold md:text-base ">
+                  Uniform For Kids Campaign
+                </h2>
               </div>
               <div>
                 <BsArrowRight size={44} />
@@ -67,8 +75,8 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row h-[392px] gap-5 mt-5">
-          <div className="h-[392px] relative md:w-[40.74%]">
+        <div className="flex flex-col md:flex-row md:h-[392px] gap-5 mt-5">
+          <div className="h-[268px] md:h-[392px] relative md:w-[40.74%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of school boys"
@@ -78,16 +86,20 @@ const Blog = () => {
               />
             </div>
             <div className="absolute bottom-0 w-full h-[38.01%] bg-[#0C6D3D] bg-opacity-[56%] flex justify-between items-center px-[5.6%] text-white">
-              <div>
-                <h1 className="text-2xl font-bold">Story Headline</h1>
-                <h2 className="mt-3 font-bold">Uniform For Kids Campaign</h2>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h1 className="text-lg font-bold md:text-2xl">
+                  Story Headline
+                </h1>
+                <h2 className="text-xs font-bold md:text-base ">
+                  Uniform For Kids Campaign
+                </h2>
               </div>
               <div>
                 <BsArrowRight size={44} />
               </div>
             </div>
           </div>
-          <div className="h-[392px] relative md:w-[59.25%]">
+          <div className="h-[268px] md:h-[392px] relative md:w-[59.25%]">
             <div className="relative w-full h-full">
               <Image
                 alt="Image of women in traditional garb"
@@ -97,9 +109,13 @@ const Blog = () => {
               />
             </div>
             <div className="absolute bottom-0 w-full h-[38.01%] bg-[#0C6D3D] bg-opacity-[56%] flex justify-between items-center px-[5.6%] text-white">
-              <div>
-                <h1 className="text-2xl font-bold">Story Headline</h1>
-                <h2 className="mt-3 font-bold">Uniform For Kids Campaign</h2>
+              <div className="flex flex-col gap-1 md:gap-2">
+                <h1 className="text-lg font-bold md:text-2xl">
+                  Story Headline
+                </h1>
+                <h2 className="text-xs font-bold md:text-base ">
+                  Uniform For Kids Campaign
+                </h2>
               </div>
               <div>
                 <BsArrowRight size={44} />

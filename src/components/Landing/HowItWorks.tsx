@@ -11,14 +11,14 @@ const HowItWorks = () => {
       <div className="flex h-[500px] md:justify-center">
         <div className="hidden grid-rows-4 md:grid ">
           <div className="flex flex-col justify-center row-span-1 row-start-2 text-right">
-            <h1 className="text-2xl font-medium">Find a cause</h1>
+            <h1 className="text-xl font-medium md:text-2xl">Find a cause</h1>
 
             <p className="font-medium opacity-[48%]">
               Purus a, ut consequat vulputate sit volutpat.
             </p>
           </div>
           <div className="flex flex-col justify-center row-span-1 row-start-4 text-right">
-            <h1 className="text-2xl font-medium">Donate</h1>
+            <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
 
             <p className="font-medium opacity-[48%]">
               Diam viverra gravida dis commodo ipsum. Tellus.
@@ -38,7 +38,9 @@ const HowItWorks = () => {
         </div>
         <div className="grid grid-rows-4">
           <div className="flex flex-col justify-center row-span-1 row-start-1">
-            <h1 className="text-2xl font-medium">Create an account</h1>
+            <h1 className="text-xl font-medium md:text-2xl">
+              Create an account
+            </h1>
 
             <p className="font-medium opacity-[48%]">
               Purus a, ut consequat vulputate sit volutpat.
@@ -46,7 +48,7 @@ const HowItWorks = () => {
           </div>
 
           <div className="flex flex-col justify-center row-span-1 row-start-3">
-            <h1 className="text-2xl font-medium">Cash or kind?</h1>
+            <h1 className="text-xl font-medium md:text-2xl">Cash or kind?</h1>
 
             <p className="font-medium opacity-[48%]">
               Diam viverra gravida dis commodo ipsum. Tellus.
@@ -55,14 +57,14 @@ const HowItWorks = () => {
 
           {/* Visible on small screens */}
           <div className="flex flex-col justify-center row-span-1 row-start-2 md:hidden">
-            <h1 className="text-2xl font-medium">Find a cause</h1>
+            <h1 className="text-xl font-medium md:text-2xl">Find a cause</h1>
 
             <p className="font-medium opacity-[48%]">
               Purus a, ut consequat vulputate sit volutpat.
             </p>
           </div>
           <div className="flex flex-col justify-center row-span-1 row-start-4 md:hidden">
-            <h1 className="text-2xl font-medium">Donate</h1>
+            <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
 
             <p className="font-medium opacity-[48%]">
               Diam viverra gravida dis commodo ipsum. Tellus.

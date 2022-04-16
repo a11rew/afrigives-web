@@ -18,29 +18,29 @@ const Home: NextPage = () => {
       <div className="flex justify-center mt-[56px] sm:mt-[120px] px-4">
         <Hero />
       </div>
-      <div className="mt-[80px] sm:mt-[120px]">
+      <div className="mt-[8vh] sm:mt-[13vh]">
         <ImageCarousel />
       </div>
-      <div className="mt-[120px] px-4">
+      <div className="mt-[13vh] px-4">
         <FeaturedOn />
       </div>
-      <div className="mt-[160px] sm:mt-[269px] px-4">
+      <div className="mt-[22vh] sm:mt-[25vh] px-4">
         <CallToAction />
       </div>
 
-      <div className="mt-[160px] sm:mt-[362px] px-4">
+      <div className="mt-[28vh] sm:mt-[28vh] px-4">
         <CallToAction reverse />
       </div>
 
-      <div className="mt-[160px] sm:mt-[362px] px-4">
+      <div className="mt-[28vh] sm:mt-[28vh] px-4">
         <CallToAction />
       </div>
 
-      <div className="mt-20 sm:mt-[289px] px-4">
+      <div className="mt-[20vh] sm:mt-[24vh] px-4">
         <HowItWorks />
       </div>
 
-      <div className="mt-20 sm:mt-[289px] mb-20 sm:mb-[168px] px-4">
+      <div className="mt-[20vh] sm:mt-[24vh] mb-[15vh] sm:mb-[20vh] px-4">
         <Blog />
       </div>
 
