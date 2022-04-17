@@ -60,7 +60,7 @@ const ImageCarousel = () => {
       transitionDuration={30000}
     >
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden">
+        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
           <Image
             layout="fill"
             objectFit="cover"
@@ -70,7 +70,7 @@ const ImageCarousel = () => {
         </div>
       </div>
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden">
+        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
           <Image
             layout="fill"
             objectFit="cover"
@@ -80,7 +80,7 @@ const ImageCarousel = () => {
         </div>
       </div>
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden">
+        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
           <Image
             layout="fill"
             objectFit="cover"
@@ -90,7 +90,7 @@ const ImageCarousel = () => {
         </div>
       </div>
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden">
+        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
           <Image
             layout="fill"
             objectFit="cover"
