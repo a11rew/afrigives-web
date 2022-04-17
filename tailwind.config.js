@@ -19,6 +19,7 @@ module.exports = {
         slideFromBottom: {
           to: {
             transform: "translateY(0)",
+            opacity: 1,
           },
         },
       },

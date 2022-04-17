@@ -1,23 +1,70 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const HowItWorks = () => {
-  const [active, setActive] = useState<1 | 2 | 3 | 4>(2);
+  const [active, setActive] = useState<1 | 2 | 3 | 4>(1);
+  const [completed, setCompleted] = useState<number[]>([]);
+  const [ref1, inView1] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px",
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px",
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px",
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px",
+  });
+
+  console.log({ inView1, inView2, inView3, inView4 });
+
+  // Animation manager
+  useEffect(() => {
+    if (inView1 && !completed.includes(1)) {
+      setActive(1);
+      setCompleted([...completed, 1]);
+    } else if (inView2 && !completed.includes(2)) {
+      setActive(2);
+      setCompleted([...completed, 2]);
+    } else if (inView3 && !completed.includes(3)) {
+      setActive(3);
+      setCompleted([...completed, 3]);
+    } else if (inView4 && !completed.includes(4)) {
+      setActive(4);
+      setCompleted([...completed, 4]);
+    }
+  }, [inView1, inView2, inView3, inView4]);
 
   return (
     <div>
       <h3 className="mb-16 text-[1.9rem] leading-[39.58px] md:text-center">
         See <span className="text-[#006633]">how Afrigives works</span>
       </h3>
-      <div className="flex h-[500px] md:justify-center">
+      <div className="flex h-[800px] md:justify-center">
         <div className="hidden grid-rows-4 md:grid ">
-          <div className="flex flex-col justify-center row-span-1 row-start-2 text-right">
+          <div
+            ref={ref2}
+            className={`flex flex-col justify-center row-span-1 row-start-2 text-right translate-y-full opacity-0 fill-mode-forwards ${
+              inView2 && "animate-slideIn"
+            }`}
+          >
             <h1 className="text-xl font-medium md:text-2xl">Find a cause</h1>
 
             <p className="font-medium opacity-[48%]">
               Purus a, ut consequat vulputate sit volutpat.
             </p>
           </div>
-          <div className="flex flex-col justify-center row-span-1 row-start-4 text-right">
+          <div
+            ref={ref4}
+            className={`flex flex-col justify-center row-span-1 row-start-4 text-right translate-y-full opacity-0 fill-mode-forwards ${
+              inView4 && "animate-slideIn"
+            }`}
+          >
             <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
 
             <p className="font-medium opacity-[48%]">
@@ -26,18 +73,24 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="grid grid-rows-4 bg-[#E0E0E0] w-1 mr-8 md:mx-16">
+        <div className="grid grid-rows-4 bg-[#E0E0E0] w-1 mr-8 md:mx-16 gap-8">
           {[...Array(4)].map((_, idx) => (
             <div
-              key={idx}
-              className={`row-start-${idx} row-span-1 ${
-                active === idx && "bg-[#006633]"
+              key={idx + 1}
+              className={`row-start-${idx + 1} row-span-1 ${
+                active === idx + 1 && "bg-[#006633]"
               }`}
             />
           ))}
         </div>
         <div className="grid grid-rows-4">
-          <div className="flex flex-col justify-center row-span-1 row-start-1">
+          <div
+            ref={ref1}
+            className={`flex flex-col justify-center row-span-1 row-start-1
+             translate-y-full opacity-0 fill-mode-forwards ${
+               inView1 && "animate-slideIn"
+             }`}
+          >
             <h1 className="text-xl font-medium md:text-2xl">
               Create an account
             </h1>
@@ -47,7 +100,12 @@ const HowItWorks = () => {
             </p>
           </div>
 
-          <div className="flex flex-col justify-center row-span-1 row-start-3">
+          <div
+            ref={ref3}
+            className={`flex flex-col justify-center row-span-1 row-start-3 translate-y-full opacity-0 fill-mode-forwards ${
+              inView3 && "animate-slideIn"
+            }`}
+          >
             <h1 className="text-xl font-medium md:text-2xl">Cash or kind?</h1>
 
             <p className="font-medium opacity-[48%]">
@@ -56,14 +114,24 @@ const HowItWorks = () => {
           </div>
 
           {/* Visible on small screens */}
-          <div className="flex flex-col justify-center row-span-1 row-start-2 md:hidden">
+          <div
+            ref={ref2}
+            className={`flex flex-col justify-center row-span-1 row-start-2 md:hidden translate-y-full opacity-0 fill-mode-forwards ${
+              inView2 && "animate-slideIn"
+            }`}
+          >
             <h1 className="text-xl font-medium md:text-2xl">Find a cause</h1>
 
             <p className="font-medium opacity-[48%]">
               Purus a, ut consequat vulputate sit volutpat.
             </p>
           </div>
-          <div className="flex flex-col justify-center row-span-1 row-start-4 md:hidden">
+          <div
+            ref={ref4}
+            className={`flex flex-col justify-center row-span-1 row-start-4 md:hidden translate-y-full opacity-0 fill-mode-forwards ${
+              inView4 && "animate-slideIn"
+            }`}
+          >
             <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
 
             <p className="font-medium opacity-[48%]">
