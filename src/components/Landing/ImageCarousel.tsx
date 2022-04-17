@@ -20,9 +20,12 @@ const ImageCarousel = () => {
       className=""
       containerClass=""
       customTransition="all 30s linear"
+      draggable={false}
+      swipeable={false}
+      ssr
       focusOnSelect={false}
       infinite
-      itemClass="mx-2"
+      itemClass=""
       keyBoardControl
       minimumTouchDrag={80}
       renderButtonGroupOutside={false}
@@ -56,45 +59,40 @@ const ImageCarousel = () => {
       showDots={false}
       sliderClass=""
       slidesToSlide={2}
-      swipeable
       transitionDuration={30000}
     >
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={StockGirls}
+        <div>
+          <img
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            src={StockGirls.src}
             alt="Image of smiling kids"
           />
         </div>
       </div>
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={StockKids}
+        <div>
+          <img
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            src={StockKids.src}
             alt="Image of school kids in uniform"
           />
         </div>
       </div>
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={StockTrad}
+        <div>
+          <img
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            src={StockTrad.src}
             alt="Image of celebrating women"
           />
         </div>
       </div>
       <div>
-        <div className="min-w-[60vw] sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative">
-          <Image
-            layout="fill"
-            objectFit="cover"
-            src={StockWomen}
+        <div>
+          <img
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            src={StockWomen.src}
             alt="Image of women in traditional garb"
           />
         </div>

@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const HowItWorks = () => {
   const [active, setActive] = useState<1 | 2 | 3 | 4>(1);
   const [completed, setCompleted] = useState<number[]>([]);
+  const isMobile = useMediaQuery(768);
+
   const [ref1, inView1] = useInView({
     triggerOnce: true,
     rootMargin: "-100px",
@@ -20,8 +23,6 @@ const HowItWorks = () => {
     triggerOnce: true,
     rootMargin: "-100px",
   });
-
-  console.log({ inView1, inView2, inView3, inView4 });
 
   // Animation manager
   useEffect(() => {
@@ -50,7 +51,7 @@ const HowItWorks = () => {
           <div
             ref={ref2}
             className={`flex flex-col justify-center row-span-1 row-start-2 text-right translate-y-full opacity-0 fill-mode-forwards ${
-              inView2 && "animate-slideIn"
+              completed.includes(2) && "animate-slideIn"
             }`}
           >
             <h1 className="text-xl font-medium md:text-2xl">Find a cause</h1>
@@ -62,7 +63,7 @@ const HowItWorks = () => {
           <div
             ref={ref4}
             className={`flex flex-col justify-center row-span-1 row-start-4 text-right translate-y-full opacity-0 fill-mode-forwards ${
-              inView4 && "animate-slideIn"
+              completed.includes(4) && "animate-slideIn"
             }`}
           >
             <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
@@ -73,11 +74,13 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="grid grid-rows-4 bg-[#E0E0E0] w-1 mr-8 md:mx-16 gap-8">
+        <div className="grid grid-rows-4 bg-[#E0E0E0] w-1 mr-8 md:mx-16 gap-8 transition-all duration-200">
           {[...Array(4)].map((_, idx) => (
             <div
               key={idx + 1}
-              className={`row-start-${idx + 1} row-span-1 ${
+              className={`row-start-${
+                idx + 1
+              } row-span-1 animate-in slide-in-from-top-0 slide-out-to-bottom-full duration-500 fade-in-100 fade-out-100 ${
                 active === idx + 1 && "bg-[#006633]"
               }`}
             />
@@ -88,7 +91,7 @@ const HowItWorks = () => {
             ref={ref1}
             className={`flex flex-col justify-center row-span-1 row-start-1
              translate-y-full opacity-0 fill-mode-forwards ${
-               inView1 && "animate-slideIn"
+               completed.includes(1) && "animate-slideIn"
              }`}
           >
             <h1 className="text-xl font-medium md:text-2xl">
@@ -103,7 +106,7 @@ const HowItWorks = () => {
           <div
             ref={ref3}
             className={`flex flex-col justify-center row-span-1 row-start-3 translate-y-full opacity-0 fill-mode-forwards ${
-              inView3 && "animate-slideIn"
+              completed.includes(3) && "animate-slideIn"
             }`}
           >
             <h1 className="text-xl font-medium md:text-2xl">Cash or kind?</h1>
@@ -114,30 +117,36 @@ const HowItWorks = () => {
           </div>
 
           {/* Visible on small screens */}
-          <div
-            ref={ref2}
-            className={`flex flex-col justify-center row-span-1 row-start-2 md:hidden translate-y-full opacity-0 fill-mode-forwards ${
-              inView2 && "animate-slideIn"
-            }`}
-          >
-            <h1 className="text-xl font-medium md:text-2xl">Find a cause</h1>
+          {isMobile && (
+            <>
+              <div
+                ref={ref2}
+                className={`flex flex-col justify-center row-span-1 row-start-2 md:hidden translate-y-full opacity-0 fill-mode-forwards ${
+                  completed.includes(2) && "animate-slideIn"
+                }`}
+              >
+                <h1 className="text-xl font-medium md:text-2xl">
+                  Find a cause
+                </h1>
 
-            <p className="font-medium opacity-[48%]">
-              Purus a, ut consequat vulputate sit volutpat.
-            </p>
-          </div>
-          <div
-            ref={ref4}
-            className={`flex flex-col justify-center row-span-1 row-start-4 md:hidden translate-y-full opacity-0 fill-mode-forwards ${
-              inView4 && "animate-slideIn"
-            }`}
-          >
-            <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
+                <p className="font-medium opacity-[48%]">
+                  Purus a, ut consequat vulputate sit volutpat.
+                </p>
+              </div>
+              <div
+                ref={ref4}
+                className={`flex flex-col justify-center row-span-1 row-start-4 md:hidden translate-y-full opacity-0 fill-mode-forwards ${
+                  completed.includes(4) && "animate-slideIn"
+                }`}
+              >
+                <h1 className="text-xl font-medium md:text-2xl">Donate</h1>
 
-            <p className="font-medium opacity-[48%]">
-              Diam viverra gravida dis commodo ipsum. Tellus.
-            </p>
-          </div>
+                <p className="font-medium opacity-[48%]">
+                  Diam viverra gravida dis commodo ipsum. Tellus.
+                </p>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
