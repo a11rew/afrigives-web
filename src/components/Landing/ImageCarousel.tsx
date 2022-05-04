@@ -62,36 +62,36 @@ const ImageCarousel = () => {
       transitionDuration={30000}
     >
       <div>
-        <div>
+        <div className="mx-2">
           <img
-            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px]  overflow-hidden relative"
             src={StockGirls.src}
             alt="Image of smiling kids"
           />
         </div>
       </div>
       <div>
-        <div>
+        <div className="mx-2">
           <img
-            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px]  overflow-hidden relative"
             src={StockKids.src}
             alt="Image of school kids in uniform"
           />
         </div>
       </div>
       <div>
-        <div>
+        <div className="mx-2">
           <img
-            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px]  overflow-hidden relative"
             src={StockTrad.src}
             alt="Image of celebrating women"
           />
         </div>
       </div>
       <div>
-        <div>
+        <div className="mx-2">
           <img
-            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px] px-2 overflow-hidden relative"
+            className="min-w-[60vw] object-cover sm:min-w-[27.5vw] h-[392px]  overflow-hidden relative"
             src={StockWomen.src}
             alt="Image of women in traditional garb"
           />
